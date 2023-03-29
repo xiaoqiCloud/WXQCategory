@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'WXQCategory_Example' do
+  pod 'WXQCategory', :path => '../'
+
+  target 'WXQCategory_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
