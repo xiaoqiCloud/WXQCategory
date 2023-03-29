@@ -1,0 +1,6 @@
+framework module Pods_WXQCategory_Tests {
+  umbrella header "Pods-WXQCategory_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

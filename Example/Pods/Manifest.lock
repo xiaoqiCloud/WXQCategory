@@ -1,0 +1,16 @@
+PODS:
+  - WXQCategory (0.1.0)
+
+DEPENDENCIES:
+  - WXQCategory (from `../`)
+
+EXTERNAL SOURCES:
+  WXQCategory:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WXQCategory: b2a6989bde03f5c216ac82eb1a772f62bd29c791
+
+PODFILE CHECKSUM: 14fd65dadb894bde666af5a843e7cf839061b309
+
+COCOAPODS: 1.12.0

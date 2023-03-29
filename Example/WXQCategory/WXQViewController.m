@@ -7,7 +7,7 @@
 //
 
 #import "WXQViewController.h"
-
+#import <WXQCategory/WXQCategory.h>
 @interface WXQViewController ()
 
 @end
