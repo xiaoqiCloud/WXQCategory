@@ -1,14 +1,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WXQCategory'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '一些常用扩展类'
   s.homepage         = 'https://github.com/xiaoqiCloud/WXQCategory'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xiaoqiCloud' => 'xiaoqi9302@163.com' }
   s.source           = { :git => 'https://github.com/xiaoqiCloud/WXQCategory.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
   s.source_files = 'WXQCategory/Classes/**/*'
   # s.resource_bundles = {
   #   'WXQCategory' => ['WXQCategory/Assets/*.png']

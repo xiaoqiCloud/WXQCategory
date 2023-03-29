@@ -8,8 +8,76 @@
 
 #import "UITextField+Valid.h"
 #import "NSString+Exp.h"
+#import <objc/runtime.h>
+
+static const void *stylePropertyKey = &stylePropertyKey;
+static const void *numberPropertyKey = &numberPropertyKey;
+static const void *limitPropertyKey = &limitPropertyKey;
+static const void *phonePropertyKey = &phonePropertyKey;
 
 @implementation UITextField (Valid)
+
+- (void)setPhone:(NSString *)phone{
+    objc_setAssociatedObject(self, phonePropertyKey, phone, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSString*)phone {
+    return [self.text qd_stringRemoveBlank];
+}
+- (void)setStyle:(UITextFieldViewStyle)style {
+    objc_setAssociatedObject(self, stylePropertyKey, [NSNumber numberWithInteger:style], OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (UITextFieldViewStyle)style {
+    return [objc_getAssociatedObject(self, stylePropertyKey) integerValue];
+}
+
+- (void)setNumber:(NSUInteger)number{
+    objc_setAssociatedObject(self, numberPropertyKey, [NSNumber numberWithInteger:number], OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSUInteger)number {
+    return [objc_getAssociatedObject(self, numberPropertyKey) integerValue];
+}
+
+- (void)setLimit:(NSUInteger)limit {
+    objc_setAssociatedObject(self, limitPropertyKey, [NSNumber numberWithInteger:limit], OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSUInteger)limit {
+    return [objc_getAssociatedObject(self, limitPropertyKey) integerValue];
+}
+
+- (void)loadStyle:(UITextFieldViewStyle)style decimalNumber:(NSInteger)number limit:(NSUInteger)limit{
+    self.style=style;
+    self.limit=limit;
+    self.number=number;
+    self.delegate=self;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    switch (self.style) {
+        case UITextFieldViewStyleText:{
+            return [self qd_isValidCharacter:range replacementString:string limit:self.limit];
+        }
+            break;
+        case UITextFieldViewStyleNumber:{
+            return [self qd_isValidNember:range replacementString:string limit:self.limit];
+        }
+            break;
+        case UITextFieldViewStyleDecimalNumber:{
+            return [self qd_isValidShouldChangeCharactersInRange:range replacementString:string decimalNumber:self.number limit:self.limit];
+        }
+            break;
+        case UITextFieldViewStylePhone:{
+            return [self qd_formatPhoneWithRange:range replacementString:string];
+        }
+            break;
+        default:
+            break;
+    }
+    return YES;
+}
 
 - (BOOL)qd_isValidShouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string decimalNumber:(NSInteger)number limit:(NSUInteger)limit {
     NSScanner      *scanner    = [NSScanner scannerWithString:string];

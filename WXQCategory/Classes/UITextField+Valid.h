@@ -17,7 +17,11 @@ typedef NS_ENUM(NSInteger, UITextFieldViewStyle) {
     UITextFieldViewStylePhone
 };
 
-@interface UITextField (Valid)
+@interface UITextField (Valid)<UITextFieldDelegate>
+
+@property (assign,nonatomic)UITextFieldViewStyle style;
+@property (assign,nonatomic)NSUInteger limit,number;
+@property (strong,nonatomic)NSString *phone;
 
 - (void)loadStyle:(UITextFieldViewStyle)style decimalNumber:(NSInteger)number limit:(NSUInteger)limit;
 
