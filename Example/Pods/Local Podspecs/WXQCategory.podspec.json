@@ -1,6 +1,6 @@
 {
   "name": "WXQCategory",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "一些常用扩展类",
   "homepage": "https://github.com/xiaoqiCloud/WXQCategory",
   "license": {
@@ -12,10 +12,23 @@
   },
   "source": {
     "git": "https://github.com/xiaoqiCloud/WXQCategory.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "WXQCategory/Classes/**/*"
+  "source_files": "WXQCategory/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "MBProgressHUD": [
+
+    ]
+  },
+  "resource_bundles": {
+    "WXQCategory": [
+      "WXQCategory/Assets/*.{png,bundle}"
+    ]
+  }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15AC5855B9D5A5972B32CBA7 /* Pods_WXQCategory_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970C22BBA32070A81371ED73 /* Pods_WXQCategory_Example.framework */; };
+		16D5940129D533B200E9775B /* WXQMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5940029D533B200E9775B /* WXQMainViewController.m */; };
+		16D5940529D539FF00E9775B /* WXQMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5940329D539FF00E9775B /* WXQMainCell.m */; };
+		16D5940629D539FF00E9775B /* WXQMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5940429D539FF00E9775B /* WXQMainCell.xib */; };
 		33EE2438716E66E1FA48347A /* Pods_WXQCategory_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583E6554C918AF56905D6F35 /* Pods_WXQCategory_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -37,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D593FF29D533B200E9775B /* WXQMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXQMainViewController.h; sourceTree = "<group>"; };
+		16D5940029D533B200E9775B /* WXQMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXQMainViewController.m; sourceTree = "<group>"; };
+		16D5940229D539FF00E9775B /* WXQMainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXQMainCell.h; sourceTree = "<group>"; };
+		16D5940329D539FF00E9775B /* WXQMainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXQMainCell.m; sourceTree = "<group>"; };
+		16D5940429D539FF00E9775B /* WXQMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WXQMainCell.xib; sourceTree = "<group>"; };
 		1DDA17DBC9CE142446BF3A8D /* WXQCategory.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WXQCategory.podspec; path = ../WXQCategory.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		55E921638F564075ECAF7D96 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		583E6554C918AF56905D6F35 /* Pods_WXQCategory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WXQCategory_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +145,11 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* WXQViewController.h */,
 				6003F5A6195388D20070C39A /* WXQViewController.m */,
+				16D593FF29D533B200E9775B /* WXQMainViewController.h */,
+				16D5940029D533B200E9775B /* WXQMainViewController.m */,
+				16D5940229D539FF00E9775B /* WXQMainCell.h */,
+				16D5940329D539FF00E9775B /* WXQMainCell.m */,
+				16D5940429D539FF00E9775B /* WXQMainCell.xib */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -247,6 +260,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = xiaoqiCloud;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 9869PF3R9L;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -277,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D5940629D539FF00E9775B /* WXQMainCell.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -346,10 +363,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WXQCategory_Example/Pods-WXQCategory_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/WXQCategory/WXQCategory.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WXQCategory.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +387,8 @@
 			files = (
 				6003F59E195388D20070C39A /* WXQAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* WXQViewController.m in Sources */,
+				16D5940529D539FF00E9775B /* WXQMainCell.m in Sources */,
+				16D5940129D533B200E9775B /* WXQMainViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +517,7 @@
 			baseConfigurationReference = 76EED78F38A1F4A36DBA3673 /* Pods-WXQCategory_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9869PF3R9L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WXQCategory/WXQCategory-Prefix.pch";
 				INFOPLIST_FILE = "WXQCategory/WXQCategory-Info.plist";
@@ -511,6 +535,7 @@
 			baseConfigurationReference = E17CCE5CFF8427725D21803E /* Pods-WXQCategory_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9869PF3R9L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WXQCategory/WXQCategory-Prefix.pch";
 				INFOPLIST_FILE = "WXQCategory/WXQCategory-Info.plist";

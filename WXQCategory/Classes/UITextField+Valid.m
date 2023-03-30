@@ -7,7 +7,7 @@
 //
 
 #import "UITextField+Valid.h"
-#import "NSString+Exp.h"
+#import "NSString+Expansion.h"
 #import <objc/runtime.h>
 
 static const void *stylePropertyKey = &stylePropertyKey;
@@ -22,7 +22,7 @@ static const void *phonePropertyKey = &phonePropertyKey;
 }
 
 - (NSString*)phone {
-    return [self.text qd_stringRemoveBlank];
+    return [self.text stringRemoveBlank];
 }
 - (void)setStyle:(UITextFieldViewStyle)style {
     objc_setAssociatedObject(self, stylePropertyKey, [NSNumber numberWithInteger:style], OBJC_ASSOCIATION_ASSIGN);
@@ -78,6 +78,7 @@ static const void *phonePropertyKey = &phonePropertyKey;
     }
     return YES;
 }
+
 
 - (BOOL)qd_isValidShouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string decimalNumber:(NSInteger)number limit:(NSUInteger)limit {
     NSScanner      *scanner    = [NSScanner scannerWithString:string];
@@ -201,7 +202,7 @@ static const void *phonePropertyKey = &phonePropertyKey;
         }
         if(![removeTemp isEqualToString:@" "]) {
             [mStr deleteCharactersInRange:NSMakeRange(range.location, range.length)];
-            NSMutableString *tempMutableStr = [NSMutableString stringWithString:[mStr qd_stringRemoveBlank]];
+            NSMutableString *tempMutableStr = [NSMutableString stringWithString:[mStr stringRemoveBlank]];
             
             if(tempMutableStr.length >= 4) {
                 [tempMutableStr insertString:@" " atIndex:3];
@@ -241,7 +242,7 @@ static const void *phonePropertyKey = &phonePropertyKey;
         
         [mStr insertString:string atIndex:range.location];
         // 每次输入都先清除空格
-        NSMutableString *noBlankString = [NSMutableString stringWithString:[mStr qd_stringRemoveBlank]];
+        NSMutableString *noBlankString = [NSMutableString stringWithString:[mStr stringRemoveBlank]];
         
         // 插入空格
         if(noBlankString.length >= 4 && noBlankString.length < 8) {
