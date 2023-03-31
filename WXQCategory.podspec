@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name            = 'WXQCategory'
-  s.version         = '0.1.2'
+  s.version         = '0.1.6'
   s.summary         = '一些常用扩展类'
   s.homepage        = 'https://github.com/xiaoqiCloud/WXQCategory'
   s.license         = { :type => 'MIT', :file => 'LICENSE' }
