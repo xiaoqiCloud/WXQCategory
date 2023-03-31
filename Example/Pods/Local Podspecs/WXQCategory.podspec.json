@@ -18,13 +18,9 @@
     "ios": "10.0"
   },
   "source_files": "WXQCategory/Classes/**/*",
-  "resources": "WXQCategory/Classes/MBProgressHUD.bundle",
   "requires_arc": true,
   "dependencies": {
     "Masonry": [
-
-    ],
-    "MBProgressHUD": [
 
     ]
   }

@@ -9,9 +9,7 @@ Pod::Spec.new do |s|
   s.source          = { :git => 'https://github.com/xiaoqiCloud/WXQCategory.git', :tag => s.version.to_s }
   s.platform        = :ios, "10.0"
   s.source_files    = 'WXQCategory/Classes/**/*'
-  s.resource        = 'WXQCategory/Classes/MBProgressHUD.bundle'
   s.requires_arc    = true
   s.dependency "Masonry"
-  s.dependency "MBProgressHUD"
   
 end

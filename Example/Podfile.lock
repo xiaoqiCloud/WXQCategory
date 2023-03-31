@@ -1,9 +1,7 @@
 PODS:
   - Masonry (1.1.0)
-  - MBProgressHUD (1.2.0)
   - WXQCategory (0.1.2):
     - Masonry
-    - MBProgressHUD
 
 DEPENDENCIES:
   - WXQCategory (from `../`)
@@ -11,7 +9,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Masonry
-    - MBProgressHUD
 
 EXTERNAL SOURCES:
   WXQCategory:
@@ -19,8 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  WXQCategory: d44d2e73f63bbb67ea9aca05e188c6cee98dcc96
+  WXQCategory: 7d3bd93b65805cdb7084ffdb415d111c9c0cac47
 
 PODFILE CHECKSUM: 0dbe6fdaaecd37c83cfed087dbaf9094ee9aefae
 
