@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  WXQCategory: c6ff1afa972e396f961aa49fc55db34708c191eb
+  WXQCategory: d44d2e73f63bbb67ea9aca05e188c6cee98dcc96
 
 PODFILE CHECKSUM: 0dbe6fdaaecd37c83cfed087dbaf9094ee9aefae
 
